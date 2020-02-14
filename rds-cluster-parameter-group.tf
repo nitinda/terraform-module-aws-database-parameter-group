@@ -12,4 +12,3 @@ resource "aws_rds_cluster_parameter_group" "rds_cluster_parameter_group" {
     }
   }
 }
-
