@@ -39,7 +39,7 @@ module "rds_cluster_parameter_group" {
   source = "git::https://github.com/nitinda/terraform-module-aws-rds-cluster-parameter-group.git?ref=master"
 
   providers = {
-    "aws" = "aws.shared-services"
+    aws = aws.services
   }
 
   # Tags
