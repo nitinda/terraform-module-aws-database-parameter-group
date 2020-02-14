@@ -32,14 +32,69 @@ _Below we are able to check the resources that are being created as part of this
 
 _To use this module, add the following call to your code:_
 
+* _**Example without Option variables**_
+
 ```tf
 module "rds_cluster_parameter_group" {
   source = "git::https://github.com/nitinda/terraform-module-aws-rds-cluster-parameter-group.git?ref=master"
 
+  providers = {
+    "aws" = "aws.shared-services"
+  }
 
+  # Tags
+  tags = {
+    Project      = "POC"
+    Owner        = "Platform Team"
+    Environment  = "prod"
+    BusinessUnit = "Platform Team"
+    ManagedBy    = "Terraform"
+    Application  = "RDS Cluster Parameter Group"
+  }
+
+  # RDS Subnet Group
+  name_prefix = "rds-cluster-parameter-group-"
+  description = "DB parameter group for grafana rds"
+  family      = "aurora5.6"
 }
 ```
 
+* _**Example with Option variables**_
+
+```tf
+module "rds_cluster_parameter_group" {
+  source = "git::https://github.com/nitinda/terraform-module-aws-rds-cluster-parameter-group.git?ref=master"
+
+  providers = {
+    aws = aws.services
+  }
+
+  # Tags
+  tags = {
+    Project      = "POC"
+    Owner        = "Platform Team"
+    Environment  = "prod"
+    BusinessUnit = "Platform Team"
+    ManagedBy    = "Terraform"
+    Application  = "RDS Cluster Parameter Group"
+  }
+
+  # RDS Subnet Group
+  name_prefix = "rds-cluster-parameter-group-"
+  description = "DB parameter group for grafana rds"
+  family      = "aurora5.6"
+  parameter   = [
+    {
+      name  = "character_set_server"
+      value = "utf8"
+    },
+    {
+      name  = "character_set_client",
+      value = "utf8"
+    }
+  ]
+}
+```
 
 ---
 
