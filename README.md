@@ -33,8 +33,8 @@ _Below we are able to check the resources that are being created as part of this
 _To use this module, add the following call to your code:_
 
 ```tf
-module "database_parameter_group" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-db-parameter-group.git?ref=master"
+module "rds_cluster_parameter_group" {
+  source = "git::https://github.com/nitinda/terraform-module-aws-rds-cluster-parameter-group.git?ref=master"
 
 
 }
@@ -52,7 +52,7 @@ _The variables required in order for the module to be successfully called from t
 | **_name\_prefix_** | _Creates a unique name_ | _string_ |
 | **_description_** | _The description of the DB subnet group_ | _string_ | **_Required_** |
 | **_family_** | _The family of the DB cluster_ | _string_ | **_Required_** |
-| **_parameter_** | _A list of DB parameters to apply_ | _list(string)_ | **_Required_** |
+| **_parameter_** | _A list of DB parameters to apply_ | _any_ | **_Optional (Default [])_** |
 | **_tags_** | _Resource tags_ | _map(string)_ | **_Required_** |
 
 
