@@ -3,7 +3,7 @@
 
 ## _General_
 
-_This module can be used to deploy a_ _**Database Parameter Group** on **AWS** Cloud Provider......_
+_This module can be used to deploy a_ _**RDS Cluster Parameter Group** on **AWS** Cloud Provider......_
 
 
 ---
@@ -21,7 +21,7 @@ _You can download the latest Terraform version from_ [_here_](https://www.terraf
 
 _Below we are able to check the resources that are being created as part of this module call:_
 
-- _**Database Parameter Group**_
+- _**RDS Cluster Parameter Group**_
 
 
 ---
