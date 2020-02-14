@@ -1,4 +1,4 @@
-# _Terraform Module: terraform-module-aws-db-parameter-group_
+# _Terraform Module: terraform-module-aws-rds-cluster-parameter-group_
 
 
 ## _General_
