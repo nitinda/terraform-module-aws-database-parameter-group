@@ -104,7 +104,7 @@ _The variables required in order for the module to be successfully called from t
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|:---:|
-| **_name\_prefix_** | _Creates a unique name_ | _string_ |
+| **_name\_prefix_** | _Creates a unique name_ | _string_ | **_Required_** |
 | **_description_** | _The description of the DB subnet group_ | _string_ | **_Required_** |
 | **_family_** | _The family of the DB cluster_ | _string_ | **_Required_** |
 | **_parameter_** | _A list of DB parameters to apply_ | _any_ | **_Optional (Default [])_** |
