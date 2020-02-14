@@ -13,11 +13,13 @@ variable "family" {
 
 variable "parameter" {
   description = "A list of DB parameters to apply."
-  type        = "list"
+  type        = any
+  default     = []
 }
 
 ## Tags
-variable common_tags {
+variable "tags" {
   description = "Resources Tags"
-  type        = "map"
+  type        = map(string)
 }
+
